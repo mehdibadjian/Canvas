@@ -22,7 +22,7 @@ class LandingController: UIViewController {
                 canvasView = nil
             }
         } else {
-            if let canvas = LandingViewModel.getsCanvas(with: .square) {
+            if let canvas = LandingViewModel.getsCanvas(with: .square, imagePerRow:  2) {
                 canvasView = canvas
                 view.addSubview(canvas)
                 canvas.translatesAutoresizingMaskIntoConstraints = false

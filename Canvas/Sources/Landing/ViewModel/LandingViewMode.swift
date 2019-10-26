@@ -7,11 +7,12 @@
 //
 import UIKit
 class LandingViewModel {
-    static func getsCanvas(with type: Shape) -> CanvasView? {
+    static func getsCanvas(with type: Shape, imagePerRow: Int = 2) -> CanvasView? {
         switch type {
         case .square:
             let canvas = CanvasView.init(frame: CGRect(x: 0, y: 0, width: AppConstant.canvasWidth, height: AppConstant.canvasWidth))
             canvas.shapeType = .square
+            canvas.imagePerRow = imagePerRow
             canvas.backgroundColor = .red
             return canvas
         default:

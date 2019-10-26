@@ -11,7 +11,7 @@ enum Shape {
     case rectangle
     case triangle
 }
-class ShapeView: UIView {
+class ShapeView: UIButton {
     var path: UIBezierPath!
     var shape: Shape!
     func createShape() {

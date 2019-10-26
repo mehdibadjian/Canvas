@@ -9,38 +9,35 @@ import UIKit
 class CanvasView: UIView {
     var shape: ShapeView!
     var shapeType: Shape!
+    var imagePerRow: Int = 2
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        drawShapes()
+        drawShapes(imagePerRow)
     }
-    fileprivate func drawShapes() {
+    fileprivate func drawShapes(_ imagePerRow: Int = 2) {
         switch shapeType {
         case .square?:
-            drawSquare()
+            drawSquare(imagePerRow)
         default: break
         }
     }
-    fileprivate func drawSquare() {
-        let width = Double(self.frame.width/2) - Double(AppConstant.padding + AppConstant.padding/2)
-        shape = SquareView.init(frame: CGRect(x: AppConstant.padding,
-                                              y: AppConstant.padding,
-                                              width: width,
-                                              height: width))
-        addSubview(shape)
-        shape = SquareView.init(frame: CGRect(x: AppConstant.padding * 2 + width ,
-                                              y: AppConstant.padding,
-                                              width: width,
-                                              height: width))
-        addSubview(shape)
-        shape = SquareView.init(frame: CGRect(x: AppConstant.padding,
-                                              y: AppConstant.padding * 2 + width,
-                                              width: width,
-                                              height: width))
-        addSubview(shape)
-        shape = SquareView.init(frame: CGRect(x: AppConstant.padding * 2 + width,
-                                              y: AppConstant.padding * 2 + width,
-                                              width: width,
-                                              height: width))
-        addSubview(shape)
+    fileprivate func drawSquare(_ imagePerRow: Int = 2) {
+        let width = (Double(self.frame.width) - (Double(imagePerRow + 1) * AppConstant.padding)) / Double(imagePerRow)
+        var row = 0
+        var colomn = 0
+        while row < imagePerRow  {
+            while colomn < imagePerRow {
+                let originX = row == 0 ? AppConstant.padding : AppConstant.padding * Double(row + 1) + Double(Double(row) * width)
+                let originY = colomn == 0 ? AppConstant.padding : AppConstant.padding * Double(colomn + 1) + Double(Double(colomn) * width)
+                shape = SquareView.init(frame: CGRect(x: originX,
+                                                      y: originY,
+                                                      width: width,
+                                                      height: width))
+                addSubview(shape)
+                colomn += 1
+            }
+            row += 1
+            colomn = 0
+        }
     }
 }
