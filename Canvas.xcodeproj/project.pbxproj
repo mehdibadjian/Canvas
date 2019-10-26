@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91FA9E7223644457006A229A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E7123644457006A229A /* AppDelegate.swift */; };
-		91FA9E7423644457006A229A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E7323644457006A229A /* ViewController.swift */; };
-		91FA9E7723644457006A229A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E7523644457006A229A /* Main.storyboard */; };
-		91FA9E7923644459006A229A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E7823644459006A229A /* Assets.xcassets */; };
-		91FA9E7C23644459006A229A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E7A23644459006A229A /* LaunchScreen.storyboard */; };
 		91FA9E8723644459006A229A /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E8623644459006A229A /* CanvasTests.swift */; };
+		91FA9E9B236444A1006A229A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E92236444A1006A229A /* ViewController.swift */; };
+		91FA9E9C236444A1006A229A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E93236444A1006A229A /* AppDelegate.swift */; };
+		91FA9E9D236444A1006A229A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E95236444A1006A229A /* Assets.xcassets */; };
+		91FA9E9E236444A1006A229A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E96236444A1006A229A /* LaunchScreen.storyboard */; };
+		91FA9E9F236444A1006A229A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E98236444A1006A229A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +27,15 @@
 
 /* Begin PBXFileReference section */
 		91FA9E6E23644457006A229A /* Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		91FA9E7123644457006A229A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91FA9E7323644457006A229A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91FA9E7623644457006A229A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91FA9E7823644459006A229A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		91FA9E7B23644459006A229A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		91FA9E7D23644459006A229A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FA9E8223644459006A229A /* CanvasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FA9E8623644459006A229A /* CanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTests.swift; sourceTree = "<group>"; };
 		91FA9E882364445A006A229A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FA9E92236444A1006A229A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91FA9E93236444A1006A229A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91FA9E95236444A1006A229A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91FA9E97236444A1006A229A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91FA9E99236444A1006A229A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91FA9E9A236444A1006A229A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +77,8 @@
 		91FA9E7023644457006A229A /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
-				91FA9E7123644457006A229A /* AppDelegate.swift */,
-				91FA9E7323644457006A229A /* ViewController.swift */,
-				91FA9E7523644457006A229A /* Main.storyboard */,
-				91FA9E7823644459006A229A /* Assets.xcassets */,
-				91FA9E7A23644459006A229A /* LaunchScreen.storyboard */,
-				91FA9E7D23644459006A229A /* Info.plist */,
+				91FA9E94236444A1006A229A /* Resources */,
+				91FA9E91236444A1006A229A /* Sources */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -94,6 +90,26 @@
 				91FA9E882364445A006A229A /* Info.plist */,
 			);
 			path = CanvasTests;
+			sourceTree = "<group>";
+		};
+		91FA9E91236444A1006A229A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				91FA9E92236444A1006A229A /* ViewController.swift */,
+				91FA9E93236444A1006A229A /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		91FA9E94236444A1006A229A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91FA9E95236444A1006A229A /* Assets.xcassets */,
+				91FA9E96236444A1006A229A /* LaunchScreen.storyboard */,
+				91FA9E98236444A1006A229A /* Main.storyboard */,
+				91FA9E9A236444A1006A229A /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91FA9E7C23644459006A229A /* LaunchScreen.storyboard in Resources */,
-				91FA9E7923644459006A229A /* Assets.xcassets in Resources */,
-				91FA9E7723644457006A229A /* Main.storyboard in Resources */,
+				91FA9E9F236444A1006A229A /* Main.storyboard in Resources */,
+				91FA9E9D236444A1006A229A /* Assets.xcassets in Resources */,
+				91FA9E9E236444A1006A229A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91FA9E7423644457006A229A /* ViewController.swift in Sources */,
-				91FA9E7223644457006A229A /* AppDelegate.swift in Sources */,
+				91FA9E9C236444A1006A229A /* AppDelegate.swift in Sources */,
+				91FA9E9B236444A1006A229A /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,20 +237,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		91FA9E7523644457006A229A /* Main.storyboard */ = {
+		91FA9E96236444A1006A229A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				91FA9E7623644457006A229A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		91FA9E7A23644459006A229A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91FA9E7B23644459006A229A /* Base */,
+				91FA9E97236444A1006A229A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		91FA9E98236444A1006A229A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91FA9E99236444A1006A229A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -361,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Canvas/Info.plist;
+				INFOPLIST_FILE = Canvas/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Canvas/Info.plist;
+				INFOPLIST_FILE = Canvas/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
