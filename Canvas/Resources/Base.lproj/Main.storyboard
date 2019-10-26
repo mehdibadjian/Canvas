@@ -18,27 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeA-mX-s3B">
-                                <rect key="frame" x="399" y="1003" width="36" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="L7I-By-QiX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Draw"/>
-                                <connections>
-                                    <action selector="drawBtnTouchUpInside:" destination="89R-4G-atW" eventType="touchUpInside" id="Spa-eL-6k6"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flJ-La-daz">
+                                <rect key="frame" x="339.5" y="1003" width="155" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-fe-YkM">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="su7-OO-rMi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="2x2 Items"/>
+                                        <connections>
+                                            <action selector="drawBtnTouchUpInside:" destination="89R-4G-atW" eventType="touchUpInside" id="pCJ-bv-Fvn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeA-mX-s3B">
+                                        <rect key="frame" x="87" y="0.0" width="68" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="L7I-By-QiX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="3x3 Items"/>
+                                        <connections>
+                                            <action selector="drawBtnTouchUpInside:" destination="89R-4G-atW" eventType="touchUpInside" id="Spa-eL-6k6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QeA-mX-s3B" firstAttribute="centerX" secondItem="mE7-9f-aic" secondAttribute="centerX" id="aFZ-aR-nZn"/>
-                            <constraint firstItem="KMJ-6T-fvM" firstAttribute="bottom" secondItem="QeA-mX-s3B" secondAttribute="bottom" constant="71" id="qzD-5f-Rsg"/>
+                            <constraint firstItem="KMJ-6T-fvM" firstAttribute="bottom" secondItem="flJ-La-daz" secondAttribute="bottom" constant="71" id="Z5W-J5-B9e"/>
+                            <constraint firstItem="flJ-La-daz" firstAttribute="centerX" secondItem="mE7-9f-aic" secondAttribute="centerX" id="qsM-zY-0U8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KMJ-6T-fvM"/>
                     </view>
                     <connections>
-                        <outlet property="actionBtn" destination="QeA-mX-s3B" id="MHE-Ko-gWp"/>
+                        <outlet property="threeItems" destination="QeA-mX-s3B" id="Ijn-PY-lLs"/>
+                        <outlet property="twoItems" destination="mtx-fe-YkM" id="xkg-gU-L5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVE-jj-LXB" userLabel="First Responder" sceneMemberID="firstResponder"/>

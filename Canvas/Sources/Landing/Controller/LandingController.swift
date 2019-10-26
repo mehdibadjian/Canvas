@@ -8,21 +8,39 @@
 import UIKit
 class LandingController: UIViewController {
     var canvasView: CanvasView?
-    @IBOutlet weak var actionBtn: UIButton! {
+    @IBOutlet weak var twoItems: UIButton! {
         didSet {
-            actionBtn.setTitle("Draw", for: .normal)
+            twoItems.setTitle("2x2 Items", for: .normal)
         }
     }
-    @IBAction func drawBtnTouchUpInside(_ sender: Any) {
+    @IBOutlet weak var threeItems: UIButton! {
+        didSet {
+            threeItems.setTitle("3x3 Items", for: .normal)
+        }
+    }
+    @IBAction func drawBtnTouchUpInside(_ sender: UIButton) {
         //TODO:- clarify with the PO as the canvas of 800*800 does not fit in the screen of iPhone and all iPads
-        if actionBtn.titleLabel?.text == "Close" {
-            actionBtn.setTitle("Draw", for: .normal)
+        var buttonTitle: String
+        var numberOfItems: Int
+        if sender == twoItems {
+            buttonTitle = "2x2 Items"
+            numberOfItems = 2
+            threeItems.isEnabled = false
+        } else {
+            buttonTitle = "3x3 Items"
+            numberOfItems = 3
+            twoItems.isEnabled = false
+        }
+        if sender.titleLabel?.text == "Close" {
+            sender.setTitle(buttonTitle, for: .normal)
             if canvasView != nil {
                 canvasView?.removeFromSuperview()
                 canvasView = nil
             }
+            twoItems.isEnabled = true
+            threeItems.isEnabled = true
         } else {
-            if let canvas = LandingViewModel.getsCanvas(with: .square, imagePerRow:  2) {
+            if let canvas = LandingViewModel.getsCanvas(with: .square, imagePerRow:  numberOfItems) {
                 canvasView = canvas
                 view.addSubview(canvas)
                 canvas.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +50,7 @@ class LandingController: UIViewController {
                     canvas.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                     canvas.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
                     ])
-                actionBtn.setTitle("Close", for: .normal)
+                sender.setTitle("Close", for: .normal)
             }
         }
     }
