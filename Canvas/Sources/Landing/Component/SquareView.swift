@@ -11,6 +11,7 @@ class SquareView: ShapeView {
         self.createShape()
     }
     override func createShape() {
+        super.createShape()
         path = UIBezierPath()
         path.move(to: CGPoint(x: 0, y: 0.0))
         path.addLine(to: CGPoint(x: 0.0, y: self.frame.size.height))
@@ -19,7 +20,7 @@ class SquareView: ShapeView {
         path.close()
         
         let shapeLayer = CAShapeLayer()
-        shapeLayer.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         shapeLayer.lineWidth = 4
         shapeLayer.path = path.cgPath

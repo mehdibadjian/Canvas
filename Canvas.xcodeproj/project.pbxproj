@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A5F19D2364909F00E64D43 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F19C2364909F00E64D43 /* UIImageExtension.swift */; };
 		91FA9E8723644459006A229A /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E8623644459006A229A /* CanvasTests.swift */; };
 		91FA9E9C236444A1006A229A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA9E93236444A1006A229A /* AppDelegate.swift */; };
 		91FA9E9D236444A1006A229A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FA9E95236444A1006A229A /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91A5F19C2364909F00E64D43 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		91FA9E6E23644457006A229A /* Canvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FA9E8223644459006A229A /* CanvasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanvasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FA9E8623644459006A229A /* CanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTests.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91A5F19B2364902F00E64D43 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				91A5F19C2364909F00E64D43 /* UIImageExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		91FA9E6523644457006A229A = {
@@ -115,6 +125,7 @@
 			children = (
 				91FA9E93236444A1006A229A /* AppDelegate.swift */,
 				91FA9EAF23644F58006A229A /* AppConstant.swift */,
+				91A5F19B2364902F00E64D43 /* Extension */,
 				91FA9EA123644507006A229A /* Landing */,
 			);
 			path = Sources;
@@ -275,6 +286,7 @@
 				91FA9EAE236446E1006A229A /* SquareView.swift in Sources */,
 				91FA9EA923644571006A229A /* CanvasView.swift in Sources */,
 				91FA9EA323644526006A229A /* LandingController.swift in Sources */,
+				91A5F19D2364909F00E64D43 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

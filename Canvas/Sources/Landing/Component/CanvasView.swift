@@ -34,6 +34,17 @@ class CanvasView: UIView {
                                                       width: width,
                                                       height: width))
                 addSubview(shape)
+                switch (row, colomn) {
+                    case (0, 0):
+                        shape.setImage(UIImage(named: "image1"), for: .normal)
+                    case (1, 0):
+                        shape.setImage(UIImage(named: "image1")?.addFilter(filter: .Vibrance), for: .normal)
+                    case (0, 1):
+                        shape.setImage(UIImage(named: "image1")?.addFilter(filter: .Chrome), for: .normal)
+                    case (1, 1):
+                        shape.setImage(UIImage(named: "image1")?.addFilter(filter: .Mono), for: .normal)
+                    default: break
+                }
                 colomn += 1
             }
             row += 1
