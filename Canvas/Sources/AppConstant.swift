@@ -8,4 +8,5 @@
 import Foundation
 struct AppConstant {
     static let padding: Double = 50
+    static let canvasWidth: Double = 800
 }

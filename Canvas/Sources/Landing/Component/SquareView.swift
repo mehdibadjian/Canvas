@@ -17,10 +17,17 @@ class SquareView: ShapeView {
         path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
         path.addLine(to: CGPoint(x: self.frame.size.width, y: 0.0))
         path.close()
-        UIColor.white.setFill()
-        path.fill()
-        UIColor.black.setStroke()
-        path.stroke()
-        path.lineWidth = 30
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        shapeLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        shapeLayer.lineWidth = 4
+        shapeLayer.path = path.cgPath
+        
+        self.layer.addSublayer(shapeLayer)
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.duration = 2
+        shapeLayer.add(animation, forKey: "StrokeAnimation")
     }
 }

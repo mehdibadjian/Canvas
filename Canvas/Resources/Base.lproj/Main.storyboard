@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWH-OW-BT9">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="89R-4G-atW">
+    <device id="ipad11_0rounded" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,19 +11,39 @@
     </dependencies>
     <scenes>
         <!--Landing Controller-->
-        <scene sceneID="ogu-qQ-hy1">
+        <scene sceneID="zff-zA-YK2">
             <objects>
-                <viewController id="AWH-OW-BT9" customClass="LandingController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VdF-wn-Udg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="89R-4G-atW" customClass="LandingController" customModule="Canvas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mE7-9f-aic">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeA-mX-s3B">
+                                <rect key="frame" x="399" y="1003" width="36" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="L7I-By-QiX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawBtnTouchUpInside:" destination="89R-4G-atW" eventType="touchUpInside" id="Spa-eL-6k6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Vyh-08-C0L"/>
+                        <constraints>
+                            <constraint firstItem="QeA-mX-s3B" firstAttribute="centerX" secondItem="mE7-9f-aic" secondAttribute="centerX" id="aFZ-aR-nZn"/>
+                            <constraint firstItem="KMJ-6T-fvM" firstAttribute="bottom" secondItem="QeA-mX-s3B" secondAttribute="bottom" constant="71" id="qzD-5f-Rsg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KMJ-6T-fvM"/>
                     </view>
+                    <connections>
+                        <outlet property="actionBtn" destination="QeA-mX-s3B" id="MHE-Ko-gWp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ucE-hk-SIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVE-jj-LXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="83"/>
+            <point key="canvasLocation" x="-817" y="42"/>
         </scene>
     </scenes>
 </document>
